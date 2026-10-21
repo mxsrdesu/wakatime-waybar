@@ -1,0 +1,13 @@
+/* opt-in icon placement; add #custom-wakatime to your shared module styles. */
+#custom-wakatime {
+  background-image: url("wakatime/icon.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px;
+  padding-left: 40px;
+}
+/* these names refer to your external Waybar palette. */
+#custom-wakatime.stale { color: @yellow; }
+#custom-wakatime.error,
+#custom-wakatime.loading { color: @fg; }
+/* menu geometry and theme also belong in your stylesheet. */

@@ -1,0 +1,24 @@
+[package]
+name = "waybar-wakatime"
+version = "1.0.1"
+edition = "2024"
+rust-version = "1.89"
+description = "wakatime daily total for waybar"
+license = "BSD-3-Clause"
+include = ["src/**", "assets/**", "examples/**", "Cargo.toml", "Cargo.lock", "LICENSE", "README.md"]
+
+[dependencies]
+base64 = "0.22"
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+chrono-tz = "0.10"
+httpdate = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls-native-roots"] }
+rust-ini = "0.18"
+rustix = { version = "1", features = ["fs", "process"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+strip = true

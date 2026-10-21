@@ -1,0 +1,19 @@
+{
+  "custom/wakatime": {
+    "exec": "waybar-wakatime status",
+    "return-type": "json",
+    "format": "{text}",
+    "interval": 120,
+    "signal": 8,
+    "exec-on-event": false,
+    "tooltip": false,
+    "escape": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/waybar/wakatime/menu.xml",
+    "menu-actions": {
+      "dashboard": "waybar-wakatime dashboard",
+      "refresh": "waybar-wakatime refresh",
+      "settings": "waybar-wakatime settings"
+    }
+  }
+}
